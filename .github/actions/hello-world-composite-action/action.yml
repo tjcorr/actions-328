@@ -22,3 +22,8 @@ runs:
       id: random-number-generator
       run: echo "random-number=$(echo $RANDOM)" >> $GITHUB_OUTPUT
       shell: bash
+
+    - name: Test output
+      shell: bash
+      run: |
+        echo "output: ${{ toJson(steps) }}"
